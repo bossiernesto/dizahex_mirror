@@ -18,6 +18,7 @@
 #ifndef DH_TBL_H
 #define DH_TBL_H
 
+#include <stdint.h>
 
 
 #define C_NONE				0x000

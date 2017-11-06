@@ -1,116 +1,8 @@
-/***********************************************************************************************************************\
-
-*																														*
-
-*																														*
-
-*                 xxxxxxxx      xxxxxxxx   xxxxxxxxx     xxxxxxx     xxxx   xxxx   xxxxxxxx   xxxx    xxxx              *
-
-*                 xxxxxxxxxx    xxxxxxxx   xxxxxxxxx    xxxxxxxxx    xxxx   xxxx   xxxxxxxx    xxxx  xxxx               *
-
-*                 xxxx   xxxx     xxxx         xxxx    xxxx   xxxx   xxxx   xxxx   xxxx         xxxxxxxx                *
-
-*                 xxxx   xxxx     xxxx       xxxx      xxxx   xxxx   xxxxxxxxxxx   xxxxxxx       xxxxxx                 *
-
-*                 xxxx   xxxx     xxxx      xxxx       xxxxxxxxxxx   xxxxxxxxxxx   xxxxxxx       xxxxxx					*
-
-*                 xxxx   xxxx     xxxx     xxxx        xxxxxxxxxxx   xxxx   xxxx   xxxx         xxxxxxxx				*
-
-*                 xxxxxxxxxx    xxxxxxxx   xxxxxxxxx   xxxx   xxxx   xxxx   xxxx   xxxxxxxx    xxxx  xxxx               *
-
-*                 xxxxxxxx      xxxxxxxx   xxxxxxxxx   xxxx   xxxx   xxxx   xxxx   xxxxxxxx   xxxx    xxxx              *
-
-*                                                                                                                       *
-
-*																														*
-
-*************************************************************************************************************************
-
-*																														*
-
-*														xxx xxxx														*
-
-*														xxx xxxxx														*
-
-*														    xx  xx														*
-
-*															xx  xx														*
-
-*														xxx xxxxx														*
-
-*														xxx xxxx														*
-
-*																														*
-
-*************************************************************************************************************************
-
-*																														*
-
-*											  DIZAHEX DISASSEMBLER ENGINE 												*
-
-*																														*
-
-* [+] ������������ ���������� x86/x86-64 (+ 16 bits):																	*
-
-*	  general-purpose, system, fpu, mmx, sse, sse2, sse3, 3dnow!, undocumented;											*
-
-* [+] �������� ��� ���������� (����� ������ dizahex_table ��������� � ����� dizahex_disasm());							*
-
-* [+] ������� ���������� ����� ����������;																				*
-
-* [+] ���� �� ������� � ����� man.txt; 																					*
-
-* [+] ������ ������������� ������ � man.txt � � test.c;																	*
-
-* [+] ������������������ ���������� � � ������ (dizahex_disasm(), dizahex_asm());										*
-
-* [+] etc;																												*
-
-*																														*
-
-\***********************************************************************************************************************/
-
-//v1.0; 
-
-
-
-
-
-
-
-																			//pr0mix
-
-																			//pr0mix@mail.ru
-
-																			//���������� ��� ���� - ��������� �����
-
-
-
-
-
-
-
+#include "stdint.h"
 #include "dizahex.h"
-
 #include "dh_tbl.h"
 
-
-
-
-
-
-
 #define get_flags(table, code)	(table[table[code / 4] + (code % 4)])
-
-
-
-
-
-
-
-
-
-
 
 /**********************************************************************************\
 
@@ -825,11 +717,3 @@ int dizahex_asm(uint8_t *pcode, DIZAHEX_STRUCT *pdiza)
 	return (pc - pcode); 
 
 }
-
-/**********************************************************************************\
-
-*	����� ����� dizahex_asm; 
-
-\**********************************************************************************/
-
-
